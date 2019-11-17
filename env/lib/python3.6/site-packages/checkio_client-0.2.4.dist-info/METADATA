@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: checkio-client
+Version: 0.2.4
+Summary: Command line interface for playing CheckiO games
+Home-page: https://github.com/CheckiO/checkio-client
+Author: CheckiO
+Author-email: a.lyabah@checkio.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: websockets (==7.0)
+Requires-Dist: requests (==2.22.0)
+
+UNKNOWN
+
+
