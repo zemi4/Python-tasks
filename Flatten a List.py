@@ -5,7 +5,7 @@
 def flat_list(array):
     result = []
     for i in array:
-        if type(i) == type([]):
+        if type(i) == list:
             result.extend(flat_list(i))
         else:
             result.append(i)
