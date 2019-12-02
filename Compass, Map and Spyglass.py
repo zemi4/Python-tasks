@@ -29,10 +29,6 @@ def navigation(seaside):
     return total
 
 
-def dist(a, b):
-    return max(abs(a[0] - b[0]), abs(a[1] - b[1]))
-
-
 if __name__ == '__main__':
     print("Example:")
     print(navigation([['Y', 0, 0, 0, 'C'],
