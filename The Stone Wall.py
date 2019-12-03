@@ -4,18 +4,20 @@
 
 
 def stone_wall(wall):
-    if '0' not in wall:
-        return 0
-    x = wall.split()
-    result = []
-    for i in x:
-        for a in enumerate(i):
-            if a[1] == '0':
-                result.append(a[0])
+    wall = wall.split()
+    weak_spots = [0] * len(wall[0])
+    for item in wall:
+        for i, part in enumerate(item):
+            if part == '0':
+                weak_spots[i] += 1
+    return weak_spots.index(max(weak_spots))
 
-    for b in sorted(result):
-        if result.count(b) > 1:
-            return b
+
+# def stone_wall(wall):
+#     wall = wall.split()
+#     rows = ["".join(i) for i in zip(*wall)]
+#     wall_thickens = [item.count("0") for item in rows]
+#     return wall_thickens.index(max(wall_thickens))
 
 
 if __name__ == '__main__':
@@ -52,10 +54,10 @@ if __name__ == '__main__':
 00########
 ''') == 0
 
-#     assert stone_wall('''
-# ##0
-# ###
-# ###
-# ''') == 2
+    assert stone_wall('''
+##0
+###
+###
+''') == 2
 
     print("Coding complete? Click 'Check' to earn cool rewards!")
