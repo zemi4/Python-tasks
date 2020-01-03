@@ -1,23 +1,13 @@
 '''Сортируйте заданную итерацию так, чтобы ее элементы оказались в порядке убывания частоты, то есть,
  сколько раз они появляются в элементах. Если два элемента имеют одинаковую частоту,
   они должны заканчиваться в том же порядке, что и первое появление в итерируемом.'''
-from itertools import groupby
 
 
 def frequency_sort(items):
-    result = []
-
-    for i in items:
-        result.append(i)
-
-        for a in items:
-            if a == result[-1] in items:
-                result.append(a)
-    print(result)
+    result = sorted(items, key=lambda x: items.index(x))
+    result = sorted(result, key=items.count, reverse=1)
     return result
 
-
-# [key for key, group in groupby(items)]
 
 if __name__ == '__main__':
     print("Example:")
